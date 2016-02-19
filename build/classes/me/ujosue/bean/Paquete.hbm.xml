@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="me.ujosue.bean.Paquete" table="Paquete">
+	    <id name="idPaquete" type="java.lang.Integer">
+            <column name="idPaquete" />
+            <generator class="increment" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="peso" type="java.lang.Integer">
+            <column name="peso" />
+        </property>
+        <property name="costo" type="java.lang.String">
+            <column name="costo" />
+        </property>
+        <many-to-one name="idRuta" class="me.ujosue.bean.Ruta" lazy="false">
+            <column name="idRuta" />
+        </many-to-one>
+        <many-to-one name="idUsuario" class="me.ujosue.bean.Usuario" lazy="false">
+            <column name="idUsuario" />
+        </many-to-one>
+	</class>
+</hibernate-mapping>

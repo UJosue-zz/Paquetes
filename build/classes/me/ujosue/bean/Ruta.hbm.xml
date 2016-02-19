@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="me.ujosue.bean.Ruta" table="Ruta">
+	    <id name="idRuta" type="java.lang.Integer">
+            <column name="idRuta" />
+            <generator class="increment" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="latIn" type="java.lang.Integer">
+            <column name="latIn" />
+        </property>
+        <property name="lngIn" type="java.lang.Integer">
+            <column name="lngIn" />
+        </property>
+        <property name="latFin" type="java.lang.Integer">
+            <column name="latFin" />
+        </property>
+        <property name="lngFin" type="java.lang.Integer">
+            <column name="lngFin" />
+        </property>
+        <property name="direccionEnvio" type="java.lang.String">
+            <column name="direccionEnvio" />
+        </property>
+        <property name="direccionRecibe" type="java.lang.String">
+            <column name="direccionRecibe" />
+        </property>
+	</class>
+</hibernate-mapping>
